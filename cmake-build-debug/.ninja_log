@@ -1,0 +1,6 @@
+# ninja log v5
+0	598	7830047765397179	CMakeFiles/Conto_Corrente.dir/main.cpp.obj	eb062418183ce37a
+7	667	7830047766102711	CMakeFiles/Conto_Corrente.dir/Transazione.cpp.obj	82c0c0aecfad49a6
+668	1049	7830047769862446	Conto_Corrente.exe	395c93acabc5aa09
+4	512	7830047986112521	CMakeFiles/Conto_Corrente.dir/ContoCorrente.cpp.obj	18c700299033e540
+513	693	7830047987849686	Conto_Corrente.exe	399e9a4e52141f71

@@ -61,6 +61,12 @@ build CMakeFiles/Conto_Corrente.dir/Transazione.cpp.obj: CXX_COMPILER__Conto_Cor
   OBJECT_DIR = CMakeFiles\Conto_Corrente.dir
   OBJECT_FILE_DIR = CMakeFiles\Conto_Corrente.dir
 
+build CMakeFiles/Conto_Corrente.dir/ContoCorrente.cpp.obj: CXX_COMPILER__Conto_Corrente_Debug C$:/Users/Asus/CLionProjects/Conto$ Corrente/ContoCorrente.cpp || cmake_object_order_depends_target_Conto_Corrente
+  DEP_FILE = CMakeFiles\Conto_Corrente.dir\ContoCorrente.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Conto_Corrente.dir
+  OBJECT_FILE_DIR = CMakeFiles\Conto_Corrente.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Conto_Corrente
@@ -69,7 +75,7 @@ build CMakeFiles/Conto_Corrente.dir/Transazione.cpp.obj: CXX_COMPILER__Conto_Cor
 #############################################
 # Link the executable Conto_Corrente.exe
 
-build Conto_Corrente.exe: CXX_EXECUTABLE_LINKER__Conto_Corrente_Debug CMakeFiles/Conto_Corrente.dir/main.cpp.obj CMakeFiles/Conto_Corrente.dir/Transazione.cpp.obj
+build Conto_Corrente.exe: CXX_EXECUTABLE_LINKER__Conto_Corrente_Debug CMakeFiles/Conto_Corrente.dir/main.cpp.obj CMakeFiles/Conto_Corrente.dir/Transazione.cpp.obj CMakeFiles/Conto_Corrente.dir/ContoCorrente.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Conto_Corrente.dir
