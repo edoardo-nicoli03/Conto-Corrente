@@ -1,0 +1,5 @@
+# Cartelle di Build di CLion/CMake
+cmake-build-debug/
+
+# File di configurazione dell'IDE
+.idea/
