@@ -1,6 +1,17 @@
 # ninja log v5
-0	598	7830047765397179	CMakeFiles/Conto_Corrente.dir/main.cpp.obj	eb062418183ce37a
-7	667	7830047766102711	CMakeFiles/Conto_Corrente.dir/Transazione.cpp.obj	82c0c0aecfad49a6
-668	1049	7830047769862446	Conto_Corrente.exe	395c93acabc5aa09
-4	512	7830047986112521	CMakeFiles/Conto_Corrente.dir/ContoCorrente.cpp.obj	18c700299033e540
 513	693	7830047987849686	Conto_Corrente.exe	399e9a4e52141f71
+11	1427	7833041964769605	CMakeFiles/Engine.dir/src/Transazione.cpp.obj	2ed6b58d647bab2d
+2	1443	7833041964982245	CMakeFiles/Engine.dir/src/ContoCorrente.cpp.obj	363d8117cbd8b441
+1444	1793	7833041968567779	libEngine.a	68595b7f2b5dcdd4
+33	2698	7833041977694810	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	d408cd60d72ea3f5
+26	10923	7833042059840395	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	df9098b8070952e7
+6	1386	7833042878784144	CMakeFiles/runTests.dir/test/TestContoCorrente.cpp.obj	93331ef94ce0ee82
+11	2228	7833042887212118	lib/libgtest.a	2d3a386050802ec2
+2228	2301	7833042887943692	lib/libgtest_main.a	3e826229a538fdcd
+2302	6417	7833042929032542	runTests.exe	43893400399f8a72
+2302	6417	7833042929032542	runTests[1]_tests.cmake	43893400399f8a72
+2302	6417	7833042929032542	C:/Users/Asus/CLionProjects/Conto_Corrente/cmake-build-debug/runTests[1]_tests.cmake	43893400399f8a72
+4	1416	7833043799447915	CMakeFiles/runTests.dir/test/TestContoCorrente.cpp.obj	93331ef94ce0ee82
+1416	5406	7833043839259234	runTests.exe	43893400399f8a72
+1416	5406	7833043839259234	runTests[1]_tests.cmake	43893400399f8a72
+1416	5406	7833043839259234	C:/Users/Asus/CLionProjects/Conto_Corrente/cmake-build-debug/runTests[1]_tests.cmake	43893400399f8a72
