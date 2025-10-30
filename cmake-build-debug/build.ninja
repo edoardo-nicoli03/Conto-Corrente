@@ -121,6 +121,51 @@ build App.exe: CXX_EXECUTABLE_LINKER__App_Debug CMakeFiles/App.dir/src/main.cpp.
   TARGET_PDB = App.exe.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target Conto_Corrente
+
+
+#############################################
+# Order-only phony target for Conto_Corrente
+
+build cmake_object_order_depends_target_Conto_Corrente: phony || CMakeFiles/Conto_Corrente.dir
+
+build CMakeFiles/Conto_Corrente.dir/src/main.cpp.obj: CXX_COMPILER__Conto_Corrente_Debug C$:/Users/Asus/CLionProjects/Conto_Corrente/src/main.cpp || cmake_object_order_depends_target_Conto_Corrente
+  DEP_FILE = CMakeFiles\Conto_Corrente.dir\src\main.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Conto_Corrente.dir
+  OBJECT_FILE_DIR = CMakeFiles\Conto_Corrente.dir\src
+
+build CMakeFiles/Conto_Corrente.dir/src/Transazione.cpp.obj: CXX_COMPILER__Conto_Corrente_Debug C$:/Users/Asus/CLionProjects/Conto_Corrente/src/Transazione.cpp || cmake_object_order_depends_target_Conto_Corrente
+  DEP_FILE = CMakeFiles\Conto_Corrente.dir\src\Transazione.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Conto_Corrente.dir
+  OBJECT_FILE_DIR = CMakeFiles\Conto_Corrente.dir\src
+
+build CMakeFiles/Conto_Corrente.dir/src/ContoCorrente.cpp.obj: CXX_COMPILER__Conto_Corrente_Debug C$:/Users/Asus/CLionProjects/Conto_Corrente/src/ContoCorrente.cpp || cmake_object_order_depends_target_Conto_Corrente
+  DEP_FILE = CMakeFiles\Conto_Corrente.dir\src\ContoCorrente.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Conto_Corrente.dir
+  OBJECT_FILE_DIR = CMakeFiles\Conto_Corrente.dir\src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Conto_Corrente
+
+
+#############################################
+# Link the executable Conto_Corrente.exe
+
+build Conto_Corrente.exe: CXX_EXECUTABLE_LINKER__Conto_Corrente_Debug CMakeFiles/Conto_Corrente.dir/src/main.cpp.obj CMakeFiles/Conto_Corrente.dir/src/Transazione.cpp.obj CMakeFiles/Conto_Corrente.dir/src/ContoCorrente.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Conto_Corrente.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Conto_Corrente.exe
+  TARGET_IMPLIB = libConto_Corrente.dll.a
+  TARGET_PDB = Conto_Corrente.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target runTests
 
 
@@ -611,6 +656,8 @@ build _deps/googletest-build/googletest/install/strip: phony _deps/googletest-bu
 
 build App: phony App.exe
 
+build Conto_Corrente: phony Conto_Corrente.exe
+
 build Engine: phony libEngine.a
 
 build gmock: phony lib/libgmock.a
@@ -639,7 +686,7 @@ build runTests: phony runTests.exe
 #############################################
 # Folder: C:/Users/Asus/CLionProjects/Conto_Corrente/cmake-build-debug
 
-build all: phony libEngine.a App.exe runTests.exe _deps/googletest-build/all
+build all: phony libEngine.a App.exe Conto_Corrente.exe runTests.exe _deps/googletest-build/all
 
 # =============================================================================
 

@@ -1,5 +1,6 @@
 C:/Users/Asus/CLionProjects/Conto_Corrente/cmake-build-debug/CMakeFiles/Engine.dir
 C:/Users/Asus/CLionProjects/Conto_Corrente/cmake-build-debug/CMakeFiles/App.dir
+C:/Users/Asus/CLionProjects/Conto_Corrente/cmake-build-debug/CMakeFiles/Conto_Corrente.dir
 C:/Users/Asus/CLionProjects/Conto_Corrente/cmake-build-debug/CMakeFiles/runTests.dir
 C:/Users/Asus/CLionProjects/Conto_Corrente/cmake-build-debug/CMakeFiles/test.dir
 C:/Users/Asus/CLionProjects/Conto_Corrente/cmake-build-debug/CMakeFiles/edit_cache.dir

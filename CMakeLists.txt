@@ -14,6 +14,9 @@ target_include_directories(Engine PUBLIC include)
 add_executable(App src/main.cpp test/TestContoCorrente.cpp test/TestContoCorrente.cpp test/TestContoCorrente.cpp)
 
 
+add_executable(Conto_Corrente src/main.cpp src/Transazione.cpp src/ContoCorrente.cpp)
+
+
 target_link_libraries(App PRIVATE Engine)
 
 
