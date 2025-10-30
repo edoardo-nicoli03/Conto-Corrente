@@ -6,7 +6,7 @@
 
 
 ContoCorrente::ContoCorrente(const std::string& nomeFile)
-    : nomeFile(nomeFile) {
+        : nomeFile(nomeFile) {
 }
 void ContoCorrente::addTransazione(const Transazione& transazione) {
     transazioni.push_back(transazione);

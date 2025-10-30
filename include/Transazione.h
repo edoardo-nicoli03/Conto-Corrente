@@ -18,6 +18,7 @@ private:
     double importo;
     std::string descrizione;
     std::string data;
+    static bool isDataValida(const std::string& data) ;
 };
 
 

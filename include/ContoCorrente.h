@@ -9,7 +9,7 @@
 
 class ContoCorrente {
 public :
-    explicit ContoCorrente (const std::string& intestatario);
+    explicit ContoCorrente (const std::string& nomeFile);
     void addTransazione (const Transazione& transazione);
     double getSaldoAttuale() const;
     std::vector <Transazione> getStoricoTransazioni() const;

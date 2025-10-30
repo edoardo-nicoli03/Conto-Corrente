@@ -2,9 +2,30 @@
 #include <sstream>
 #include <stdexcept>
 #include <vector>
+#include <cctype>
+
+bool Transazione::isDataValida(const std::string& data) {
+    if (data.length() != 10) return false;
+    if (data[4] != '-' || data[7] != '-') return false;
+
+    for (int i : {0, 1, 2, 3}) {
+        if (!std::isdigit(data[i])) return false;
+    }
+    for (int i : {5, 6}) {
+        if (!std::isdigit(data[i])) return false;
+    }
+    for (int i : {8, 9}) {
+        if (!std::isdigit(data[i])) return false;
+    }
+
+    return true;
+}
 
 Transazione::Transazione(double importo, const std::string& descrizione, const std::string& data)
-    : importo(importo), descrizione(descrizione), data(data) {
+        : importo(importo), descrizione(descrizione), data(data) {
+    if (!isDataValida(data)) {
+        throw std::invalid_argument("Formato data non valido: " + data + " (usa YYYY-MM-DD)");
+    }
 
 }
 
@@ -39,13 +60,13 @@ Transazione Transazione::daStringaCsv(const std::string& rigaCsv) {
     }
 
     try{
-    double importo = std::stod(elementi[0]);
-    std::string descrizione = elementi[1];
-    std::string data = elementi[2];
+        double importo = std::stod(elementi[0]);
+        std::string descrizione = elementi[1];
+        std::string data = elementi[2];
 
-    return Transazione(importo, descrizione, data);
+        return Transazione(importo, descrizione, data);
 
- } catch (const std::exception& e){
+    } catch (const std::exception& e){
         throw std::runtime_error("Errore nel parsing della Transazione da CSV:" + rigaCsv + "| Errore: "+ e.what());
 
     }
