@@ -1,6 +1,6 @@
 
-#include "gtest/gtest.h" // Include la libreria GoogleTest
-#include "ContoCorrente.h" // Include la classe che vogliamo testare
+#include "gtest/gtest.h"
+#include "ContoCorrente.h"
 
 
 
@@ -22,7 +22,7 @@ TEST(TestContoCorrente, SaldoMistoEntrataEUscita) {
     ContoCorrente conto("test_file.csv");
 
     Transazione entrata(500.0, "Stipendio", "2025-10-24");
-    Transazione uscita(-75.50, "Bolletta", "2025-10-25"); // Uscita negativa
+    Transazione uscita(-75.50, "Bolletta", "2025-10-25");
 
     conto.addTransazione(entrata);
     conto.addTransazione(uscita);
@@ -74,34 +74,29 @@ TEST(TestTransazione, ConversioneCsvAndata_e_Ritorno) {
 
     Transazione ricostruita = Transazione::daStringaCsv(csv);
 
-    // Verifica che i dati siano identici
     ASSERT_NEAR(ricostruita.getImporto(), 123.45, 0.001);
     ASSERT_EQ(ricostruita.getDescrizione(), "Test descrizione");
     ASSERT_EQ(ricostruita.getData(), "2025-10-30");
 }
 TEST(TestTransazione, DataValida) {
-    // Questo deve funzionare
     ASSERT_NO_THROW({
                         Transazione t(100.0, "Test", "2025-10-30");
                     });
 }
 
 TEST(TestTransazione, DataNonValida_FormatoErrato) {
-    // Data senza trattini
     ASSERT_THROW({
                      Transazione t(100.0, "Test", "20251030");
                  }, std::invalid_argument);
 }
 
 TEST(TestTransazione, DataNonValida_Lettere) {
-    // Data con lettere
     ASSERT_THROW({
                      Transazione t(100.0, "Test", "202A-10-30");
                  }, std::invalid_argument);
 }
 
 TEST(TestTransazione, DataNonValida_Corta) {
-    // Data troppo corta
     ASSERT_THROW({
                      Transazione t(100.0, "Test", "2025-1-1");
                  }, std::invalid_argument);
