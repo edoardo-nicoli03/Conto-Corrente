@@ -6,7 +6,7 @@
 
 TEST(TestContoCorrente, SaldoInizialeZero) {
     ContoCorrente conto("test_file.csv");
-    ASSERT_EQ(conto.getSaldoAttuale(), 0.0);
+    ASSERT_EQ(conto.getSaldo(), 0.0);
 }
 
 TEST(TestContoCorrente, SaldoDopoSingolaEntrata) {
@@ -14,7 +14,7 @@ TEST(TestContoCorrente, SaldoDopoSingolaEntrata) {
     Transazione entrata(100.50, "Stipendio", "2025-10-24");
 
     conto.addTransazione(entrata);
-    ASSERT_NEAR(conto.getSaldoAttuale(), 100.50, 0.001);
+    ASSERT_NEAR(conto.getSaldo(), 100.50, 0.001);
 }
 
 
@@ -27,7 +27,7 @@ TEST(TestContoCorrente, SaldoMistoEntrataEUscita) {
     conto.addTransazione(entrata);
     conto.addTransazione(uscita);
 
-    ASSERT_NEAR(conto.getSaldoAttuale(), 424.50, 0.001);
+    ASSERT_NEAR(conto.getSaldo(), 424.50, 0.001);
 }
 
 TEST(TestContoCorrente, SaldoConPiuUscite) {
@@ -41,7 +41,7 @@ TEST(TestContoCorrente, SaldoConPiuUscite) {
     conto.addTransazione(uscita1);
     conto.addTransazione(uscita2);
 
-    ASSERT_NEAR(conto.getSaldoAttuale(), 55.0, 0.001);
+    ASSERT_NEAR(conto.getSaldo(), 55.0, 0.001);
 }
 
 TEST(TestContoCorrente, SalvataggioECaricamento) {
@@ -55,7 +55,7 @@ TEST(TestContoCorrente, SalvataggioECaricamento) {
     ContoCorrente conto2("test_io.csv");
     ASSERT_TRUE(conto2.caricaDaFile());
 
-    ASSERT_NEAR(conto2.getSaldoAttuale(), 750.0, 0.001);
+    ASSERT_NEAR(conto2.getSaldo(), 750.0, 0.001);
 
     ASSERT_EQ(conto2.getStoricoTransazioni().size(), 3);
 }
@@ -63,7 +63,7 @@ TEST(TestContoCorrente, SalvataggioECaricamento) {
 TEST(TestContoCorrente, CaricamentoDaFileInesistente) {
     ContoCorrente conto("file_che_non_esiste.csv");
     ASSERT_FALSE(conto.caricaDaFile());
-    ASSERT_EQ(conto.getSaldoAttuale(), 0.0);
+    ASSERT_EQ(conto.getSaldo(), 0.0);
 }
 
 TEST(TestTransazione, ConversioneCsvAndata_e_Ritorno) {

@@ -10,20 +10,12 @@ public :
     std::string getDescrizione() const;
     std::string getData() const;
 
-    std::string aStringaCsv() const;
-
-    static Transazione daStringaCsv(const std::string& rigaCsv);
-
 private:
     double importo;
     std::string descrizione;
     std::string data;
-    static bool isDataValida(const std::string& data) ;
+    bool controlloData(const std::string& data) ;
 };
-
-
-
-
 
 
 
