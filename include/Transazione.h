@@ -14,7 +14,7 @@ private:
     double importo;
     std::string descrizione;
     std::string data;
-    bool controlloData(const std::string& data) ;
+    bool controlloData(const std::string& data);
 };
 
 

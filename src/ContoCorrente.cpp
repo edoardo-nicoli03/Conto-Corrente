@@ -72,3 +72,35 @@ bool ContoCorrente::salvaSuFile() const {
     file.close();
     return true;
 }
+
+
+void ContoCorrente::stampaStorico() const  {
+    for (int i = 0; i < transazioni.size(); i++) {
+        Transazione t = transazioni[i];
+        std::cout <<"Data: "  << t.getData()
+                  << "|"  << t.getDescrizione()
+                  << "|"  << t.getImporto() << " euro\n";
+    }
+}
+
+double ContoCorrente::getTotEntrate() const {
+    double totale = 0.0;
+    for (const auto& t : transazioni) {
+        if (t.getImporto() > 0) {
+            totale += t.getImporto();
+        }
+    }
+    return totale;
+}
+
+
+double ContoCorrente::getTotUscite() const {
+    double totale = 0.0;
+    for (const auto& t : transazioni) {
+        if (t.getImporto() < 0) {
+            totale += t.getImporto();
+        }
+    }
+    return totale;
+}
+

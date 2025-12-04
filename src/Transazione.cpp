@@ -8,17 +8,25 @@ bool Transazione::controlloData(const std::string& data) {
    if (data.size() != 10) {
        return false;
    }
+    for (int i = 0; i <= 3; i++) {
+        if (!isdigit(data[i])) {
+            return false;
+        }
+    }
    if (data[4] != '-'|| data[7] != '-') {
        return false;
    }
-   for (int i = 0; i <= 3; i++) {
-       if (!isdigit(data[i])) {
-           return false;
-       }
-   }
+
+    if (!isdigit(data[5]) || !isdigit(data[6])){
+        return false;
+    }
+
    if (!isdigit(data[8]) || !isdigit(data[9])){
        return false;
    }
+
+
+
    return true;
 }
 

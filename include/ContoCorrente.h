@@ -16,6 +16,11 @@ public :
     bool caricaDaFile ();
     bool salvaSuFile () const;
     std::string getIban() const;
+    void stampaStorico() const;
+    double getTotEntrate ()  const;
+    double getTotUscite() const;
+
+
 
 private:
     std::string nomeFile;
